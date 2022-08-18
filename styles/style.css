@@ -778,9 +778,9 @@ input[type="email"] {
   padding-left: 42px;
 }
 
-input[type="text"]:focus ~ .form-icon,
-input[type="phone"]:focus ~ .form-icon,
-input[type="email"]:focus ~ .form-icon {
+input[type="text"]:focus ~ .form-icon-wrapper,
+input[type="phone"]:focus ~ .form-icon-wrapper,
+input[type="email"]:focus ~ .form-icon-wrapper {
   fill: var(--activ-logo-color);
 }
 
@@ -814,12 +814,21 @@ textarea {
   cursor: pointer;
 }
 
-.form-icon {
-  display: inline-block;
+/* icon form */
+.form-icon-wrapper {
   position: absolute;
-  top: 70%;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
   left: 15px;
-  transform: translateY(-70%);
+  transform: translateY(-50%);
 }
 
 /* checkbox */
